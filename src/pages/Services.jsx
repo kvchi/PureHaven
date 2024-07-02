@@ -2,21 +2,21 @@ import React from 'react'
 import { FaRegCalendarAlt, FaRegCalendarCheck } from 'react-icons/fa'
 import { FaPersonWalkingLuggage, FaRegFaceGrinWide } from 'react-icons/fa6'
 import { cleaningLady3, cleaningMan } from '../assets/images'
-import { Link } from 'react-router-dom'
-import { GiCheckMark } from 'react-icons/gi'
+
+
 import Cards from '../components/Cards'
 
 export default function Services() {
   return (
     <main className='bg-white py-16 px-4 '>
-        <div className='mt-16 flex items-center justify-center md:justify-start ml-20 '>
+        <div className='mt-16 flex items-center justify-center md:justify-start md:ml-20 '>
           <h4 className='bg-primary text-white text-xl font-semibold rounded-full p-4'>How We work</h4>
         </div>
-        <div className='mt-4 ml-20 flex flex-col md:flex-row'>
+        <div className='mt-4 md:ml-20 flex flex-col md:flex-row'>
           <h3 className=' text-primary text-xl md:text-2xl font-bold md:max-w-lg mb-4 text-center'>Our Cleaning Company Work Process For You</h3>
           <p className='leading-loose text-slate-500 md:max-w-sm px-10 ml-4'>Our services goes beyond the basic service and provides you with the beauty of your home and enhance your life.</p>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mt-8 ml-20'>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mt-8 ml-4 md:ml-20'>
             {
               [
                 {id: "1234", heading: "Clean And Fresh", text: "A clean and fresh home not only enhances your living space but also promotes a healthier lifestyle, providing comfort and peace of mind for you and your family.",color: "text-red-500"},
@@ -36,11 +36,11 @@ export default function Services() {
             }
         </div>
         <section className='bg-secondary h-screen p-10 md:p-20 px-4 md:px-0 mt-8'>
-                <div className='ml-20 flex justify-center md:justify-start'>
+                <div className=' flex justify-center md:justify-start md:ml-8'>
                   <h3 className='bg-primary p-4 rounded-full text-xl font-semibold text-white text-center'>Why Choose Us</h3>
                 </div>
                 <aside className='flex-1 flex flex-col md:flex-row relative'>
-                  <div className='ml-20 mt-4'>
+                  <div className='md:ml-8 mt-4'>
                     <h3 className='text-primary text-2xl md:text-4xl font-semibold  md:max-w-lg text-center md:text-start'>
                       Your Happiness is Our Priority
                     </h3>
@@ -83,7 +83,7 @@ export default function Services() {
                 </aside>
                 
         </section>
-        <section className='bg-white w-full  p-10 px-4 ml-16'>
+        <section className='bg-white w-full  p-10 px-4 '>
                 <div className='flex  items-center justify-center md:justify-start'>
                   <h3 className='bg-primary/90  p-2 text-xl md:text-2xl rounded-full text-white font-semibold'>
                     Pricing

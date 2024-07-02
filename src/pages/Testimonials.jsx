@@ -86,7 +86,7 @@ export default function Testimonials() {
         <h3 className='text-4xl text-center md:text-start font-bold text-primary mt-2'>Frquently Asked Questions</h3>
       </div>
     <aside className='flex flex-col md:flex-row'>
-    <div className='faq ml-20 w-[500px] mb-12 bg-secondary shadow-xl rounded-md p-4'>
+    <div className='faq ml-12 w-[500px] mb-12 bg-secondary shadow-xl rounded-md p-4'>
           {faqsData.map((el, i)=> (
                 <div key={i} className='el'>
                   <div className='heading flex items-center justify-between'>
@@ -109,7 +109,7 @@ export default function Testimonials() {
                 </div>
           ))} 
       </div>
-      <div className='ml-20 mb-4 md:ml-56 w-[500px] '>
+      <div className='ml-12 mb-4 md:ml-56 w-[500px] '>
         <img src={cleaners} alt="" className='rounded-tr-[100px] border-[10px] border-white shadow-xl'/>
       </div>
     </aside>
