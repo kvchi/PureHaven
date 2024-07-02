@@ -71,7 +71,7 @@ export default function Services() {
                       }
                      </div>
                   </div>
-                  <div className='mx-20'>
+                  <div className='mx-4'>
                     <div className='relative w-36 md:w-56 '>
                        <img src={cleaningMan} alt="" className='h-40 md:h-72 object-cover rounded-tr-[50px] ml-44 mt-4'/>
                        <img src={cleaningLady3} alt="" className='h-44 md:h-72  object-cover rounded-tr-[50px] absolute top-24 left-20 md:left-0 border-[8px] border-secondary '/>
