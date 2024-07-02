@@ -35,7 +35,7 @@ export default function Services() {
               )
             }
         </div>
-        <section className='bg-secondary h-screen p-10 md:p-20 px-4 md:px-0 mt-8'>
+        <section className='bg-secondary w-screen p-10 md:p-20 px-4 md:px-0 mt-8'>
                 <div className=' flex justify-center md:justify-start md:ml-8'>
                   <h3 className='bg-primary p-4 rounded-full text-xl font-semibold text-white text-center'>Why Choose Us</h3>
                 </div>
@@ -71,10 +71,10 @@ export default function Services() {
                       }
                      </div>
                   </div>
-                  <div className='mx-20 mt-10'>
-                    <div className='relative w-36 md:w-56'>
+                  <div className='mx-20'>
+                    <div className='relative w-36 md:w-56 '>
                        <img src={cleaningMan} alt="" className='h-40 md:h-72 object-cover rounded-tr-[50px] ml-44 mt-4'/>
-                       <img src={cleaningLady3} alt="" className='h-44 md:h-72  object-cover rounded-tr-[50px] absolute top-24 left-20 md:left-0 border-[8px] border-secondary'/>
+                       <img src={cleaningLady3} alt="" className='h-44 md:h-72  object-cover rounded-tr-[50px] absolute top-24 left-20 md:left-0 border-[8px] border-secondary '/>
                          </div>
                          <div className='relative -right-60 mt-4'>
                           <button className='bg-primary p-4 rounded-full text-white font-semibold hover:scale-105 duration-300 hover:bg-primary/80'>Book Now</button>
