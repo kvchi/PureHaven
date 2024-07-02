@@ -20,7 +20,7 @@ export default function ContactUs() {
                 <h3 className='bg-primary p-4 rounded-full text-2xl text-white font-semibold shadow-md'>Contact Us</h3>
               </div>
               <div className='mt-4 flex justify-center md:justify-start'>
-                <h4 className='text-3xl font-bold text-primary'>Get in touch with Our Team</h4>
+                <h4 className='md:text-3xl text-2xl font-bold text-primary'>Get in touch with Our Team</h4>
               </div>
               <div className='max-w-md mt-2 flex flex-col justify-center items-center md:justify-start'>
                 <p className='text-lg text-slate-500 font-medium  md:ml-0 text-center md:text-start'>Email, call or complete the form to learn how PureHaven can solve your Home Cleaning problem.</p>
@@ -58,7 +58,7 @@ export default function ContactUs() {
                 <h3 className='text-2xl font-bold text-primary'>Get in Touch </h3>
                 <p className='text-xl text-slate-500 font-semibold mt-2'>You can reach us anytime</p>
               </div>
-              <div className="flex items-center gap-2 border-b border-dark/50 hover:border-primary p-3">
+              <div className="flex items-center justify-center gap-2 border-b border-dark/50 hover:border-primary p-3">
                 <input type="name" required placeholder='Enter Firstname' className="flex-1 text-sm outline-none rounded-full p-2" />
                 <input type="name" required placeholder='Enter Lastname' className="flex-1 text-sm outline-none rounded-full p-2" />
               </div>
