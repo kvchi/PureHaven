@@ -15,15 +15,15 @@ export default function ContactUs() {
     <main className=''>
       <section className='flex flex-col md:flex-row gap-8'>
 
-        <aside className='bg-white py-20 px-4 relative ml-20'>
-              <div className='flex'>
+        <aside className='bg-white py-20 px-4 relative ml-4 md:ml-20'>
+              <div className='flex justify-center md:justify-start'>
                 <h3 className='bg-primary p-4 rounded-full text-2xl text-white font-semibold shadow-md'>Contact Us</h3>
               </div>
-              <div className='mt-4'>
+              <div className='mt-4 flex justify-center md:justify-start'>
                 <h4 className='text-3xl font-bold text-primary'>Get in touch with Our Team</h4>
               </div>
-              <div className='max-w-md mt-2 flex flex-col'>
-                <p className='text-lg text-slate-500 font-medium'>Email, call or complete the form to learn how PureHaven can solve your Home Cleaning problem.</p>
+              <div className='max-w-lg mt-2 flex flex-col justify-center items-center md:justify-start'>
+                <p className='text-lg text-slate-500 font-medium ml-20 md:ml-0 text-center md:text-start'>Email, call or complete the form to learn how PureHaven can solve your Home Cleaning problem.</p>
                 <p className='mt-8 ml-4 text-slate-500 font-medium text-xl'>
                   PureHaven@gmail.com
                 </p>
@@ -51,7 +51,7 @@ export default function ContactUs() {
                 }
               </div>
         </aside>
-        <aside className='py-20 px-4'>
+        <aside className='mb-8 md:py-20 px-4'>
           <form ref={formRef} onSubmit={handleSubmit}>
             <div className='flex flex-col gap-4 bg-secondary rounded-md shadow-lg p-8 w-full'>
               <div className=''>
