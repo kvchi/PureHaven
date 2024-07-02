@@ -22,8 +22,8 @@ export default function ContactUs() {
               <div className='mt-4 flex justify-center md:justify-start'>
                 <h4 className='text-3xl font-bold text-primary'>Get in touch with Our Team</h4>
               </div>
-              <div className='max-w-lg mt-2 flex flex-col justify-center items-center md:justify-start'>
-                <p className='text-lg text-slate-500 font-medium ml-20 md:ml-0 text-center md:text-start'>Email, call or complete the form to learn how PureHaven can solve your Home Cleaning problem.</p>
+              <div className='max-w-md mt-2 flex flex-col justify-center items-center md:justify-start'>
+                <p className='text-lg text-slate-500 font-medium  md:ml-0 text-center md:text-start'>Email, call or complete the form to learn how PureHaven can solve your Home Cleaning problem.</p>
                 <p className='mt-8 ml-4 text-slate-500 font-medium text-xl'>
                   PureHaven@gmail.com
                 </p>
