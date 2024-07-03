@@ -1,20 +1,33 @@
-import React, {useRef} from 'react'
+import React, {useRef,} from 'react';
+import axios from 'axios';
 import { BsChatRightTextFill } from 'react-icons/bs'
-
 import { HiOutlineMailOpen } from 'react-icons/hi'
 import { MdOutlinePhonelinkRing } from 'react-icons/md'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactUs() {
-  const formRef = useRef(null)
-  const handleSubmit = (e) => {
+  const formRef = useRef(null);
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    const data = new FormData(formRef.current)
-    console.log(data)
+    const formData = new FormData(formRef.current);
+    const data = Object.fromEntries(formData);
+
+    try {
+      const response = await axios.post('http://localhost:5000/api/form', data);
+      if (response.status === 201) {
+        toast.success('Thank you for reaching out! Your message has been sent successfully.');
+      }
+    } catch (error) {
+      toast.error('There was an error sending your message. Please try again later.');
     }
+    };
+
   return (
     <main className=''>
+      <ToastContainer />
       <section className='flex flex-col md:flex-row gap-8'>
-
         <aside className='bg-white py-20 px-4 relative ml-4 md:ml-20'>
               <div className='flex justify-center md:justify-start'>
                 <h3 className='bg-primary p-4 rounded-full text-2xl text-white font-semibold shadow-md'>Contact Us</h3>
@@ -59,20 +72,20 @@ export default function ContactUs() {
                 <p className='text-xl text-slate-500 font-semibold mt-2'>You can reach us anytime</p>
               </div>
               <div className="flex items-center justify-center gap-2 border-b border-dark/50 hover:border-primary p-3">
-                <input type="name" required placeholder='Enter Firstname' className="flex-1 text-sm outline-none rounded-full p-2" />
-                <input type="name" required placeholder='Enter Lastname' className="flex-1 text-sm outline-none rounded-full p-2" />
+                <input type="text" name='firstname' required placeholder='Enter Firstname' className="flex-1 text-sm outline-none rounded-full p-2" />
+                <input type="text" name='lastname' required placeholder='Enter Lastname' className="flex-1 text-sm outline-none rounded-full p-2" />
               </div>
               <div className="flex items-center gap-2 border-b border-dark/50 hover:border-primary p-3">
               <HiOutlineMailOpen className='text-primary text-xl' />
-                <input  type="email" required placeholder='Enter Email' className="text-sm outline-none rounded-full p-2 w-full"/>                
+                <input  type="email" name='email' required placeholder='Enter Email' className="text-sm outline-none rounded-full p-2 w-full "/>                
               </div>
               <div className="flex items-center gap-2 border-b border-dark/50 hover:border-primary p-3">
                 <MdOutlinePhonelinkRing className='text-primary text-xl' />
-                <input type="phone" required placeholder='Phone Number' className="flex-1 text-sm outline-none rounded-full p-2" />
+                <input type="tel" name='phone' required placeholder='Phone Number' className="flex-1 text-sm outline-none rounded-full p-2" />
               </div>
               <div className="flex gap-2 border-b border-dark/50 hover:border-primary p-3">
               <BsChatRightTextFill className='text-primary' />
-                <textarea required rows={5} placeholder='Enter Your Message' className="flex-1 text-sm outline-none rounded-md p-2"></textarea>
+                <textarea name='message' required rows={5} placeholder='Enter Your Message' className="flex-1 text-sm outline-none rounded-md p-2"></textarea>
               </div>
               <button type="submit" className="bg-primary hover:bg-primary/80 text-white rounded-full w-max px-6 py-1.5 shadow-lg">Send </button>
             </div>
