@@ -35,7 +35,7 @@ export default function Services() {
               )
             }
         </div>
-        <section className='bg-secondary w-screen p-10 md:p-20 px-4 md:px-0 mt-8'>
+        <section className='bg-secondary p-10 md:p-20 px-4 md:px-0 mt-8'>
                 <div className=' flex justify-center md:justify-start md:ml-8'>
                   <h3 className='bg-primary p-4 rounded-full text-xl font-semibold text-white text-center'>Why Choose Us</h3>
                 </div>
@@ -47,7 +47,7 @@ export default function Services() {
                       <p className='leading-loose text-slate-500 text-lg  md:max-w-sm lg:max-w-md mt-2 text-center md:text-start'>
                       At our core, we believe that a clean and tidy home brings happiness and peace of mind.
                       </p>
-                     <div className=' max-h-screen flex md:flex-col'>
+                     <div className=' flex flex-col'>
                      {
                         [
                           {id: "54321",icon:<FaPersonWalkingLuggage />, heading: "Move Out Cleaning", text: " With our meticulous move out cleaning services, we ensure your old space is left spotless and ready for the next chapter.",color: "text-orange-500"},
@@ -55,8 +55,8 @@ export default function Services() {
                           {id: "543",icon:<FaRegCalendarCheck />, heading: "Customer Focused Reviews", text: "At PureHaven, we pride ourselves on being customer-focused, and our reviews reflect our commitment to excellence.",color: "text-yellow-500"}
                         ].map(services =>
                           <div key={services.id} className='flex relative items-center md:space-x-4' >
-                            <div className={` mb-28 mr-4 md:mb-8`}>
-                            <span className={ `text-2xl *:
+                            <div className={` mb-12 mr-4 md:mb-8`}>
+                            <span className={ `text-2xl*:
                               ${services.color}`}>
                                 {services.icon}
                             </span>
@@ -71,12 +71,12 @@ export default function Services() {
                       }
                      </div>
                   </div>
-                  <div className='mx-4'>
-                    <div className='relative w-36 md:w-56 '>
+                  <div className='mx-'>
+                    <div className='relative w-36 md:w-56 mb-10 md:mb-4'>
                        <img src={cleaningMan} alt="" className='h-40 md:h-72 object-cover rounded-tr-[50px] ml-44 mt-4'/>
                        <img src={cleaningLady3} alt="" className='h-44 md:h-72  object-cover rounded-tr-[50px] absolute top-24 left-20 md:left-0 border-[8px] border-secondary '/>
-                         </div>
-                         <div className='relative -right-60 mt-4'>
+                    </div>
+                         <div className='relative -right-60'>
                           <button className='bg-primary p-4 rounded-full text-white font-semibold hover:scale-105 duration-300 hover:bg-primary/80'>Book Now</button>
                            </div>
                     </div>
