@@ -31,3 +31,6 @@ yarn-error.log*
 
 # Vite
 frontend/.vite
+
+# Duplicate backend (use root /backend only)
+frontend/backend
